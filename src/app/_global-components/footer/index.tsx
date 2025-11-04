@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   const socialMediaLinks = [
     { icon: <LinkedinIcon />, key: "linkedin" },
-    { icon: <DiscordIcon />, key: "discord" },
+    // { icon: <DiscordIcon />, key: "discord" },
     { icon: <FacebookIcon />, key: "facebook" },
     { icon: <InstagramIcon />, key: "instagram" },
   ];
@@ -70,20 +70,17 @@ const Footer = () => {
                 Partnership
               </h3>
               <div className="flex flex-col gap-3 sm:gap-4">
-                {[
-                  "Seed Funding",
-                  "Investor Partner",
-                  "Mentorship",
-                  "Partnership",
-                ].map((item) => (
-                  <Link
-                    key={item}
-                    href={`/${item.toLowerCase().replace(/ /g, "-")}`}
-                    className="text-[#6B7280] hover:text-gray-900 transition-colors text-sm sm:text-base"
-                  >
-                    {item}
-                  </Link>
-                ))}
+                {["Seed Funding", "Investor Partner", "Partnership"].map(
+                  (item) => (
+                    <Link
+                      key={item}
+                      href={`/${item.toLowerCase().replace(/ /g, "-")}`}
+                      className="text-[#6B7280] hover:text-gray-900 transition-colors text-sm sm:text-base"
+                    >
+                      {item}
+                    </Link>
+                  )
+                )}
               </div>
             </div>
 
@@ -113,14 +110,14 @@ const Footer = () => {
           </h3>
           <div className="flex items-center flex-row-reverse gap-1 sm:gap-10 text-[#6B7280] text-sm sm:text-base font-normal">
             <Link
-              href="/privacy"
+              href="/"
               className="hover:text-gray-900 transition-colors"
             >
               Privacy Policy
             </Link>
             <p className="text-[16px]">.</p>
             <Link
-              href="/terms"
+              href="/"
               className="hover:text-gray-900 transition-colors"
             >
               Terms & Conditions

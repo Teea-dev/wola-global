@@ -7,6 +7,7 @@ import {
   GoggleLogo,
   GoodLeapLogo,
   GrammalyLogo,
+  KohlerGeneratorsLogo,
   LoomLogo,
   ZippoLogo,
 } from "../../../../public/icons";
@@ -32,7 +33,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-2">
             <Button className="bg-[#1F253F] text-white px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors duration-200">
-            Generator Sales
+              Generator Sales
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -50,7 +51,7 @@ const Hero = () => {
               </svg>
             </Button>
             <Button className="bg-[#EAE68B] text-[#1F253F] px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors duration-200">
-             Generator Rentals 
+              Generator Rentals
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="5.59"
@@ -84,14 +85,39 @@ const Hero = () => {
       </div>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-8 sm:mt-12">
         <p className="text-[16px] text-[#6B7280] w-[176px] flex-wrap text-center sm:text-start">
-          Trusted by 500+ businesses across Southwest Nigeria
+          Trusted brands and partners we work with
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 place-items-center gap-4 sm:gap-8">
-          <ZippoLogo />
-          <GrammalyLogo />
-          <GoodLeapLogo />
-          <GoggleLogo />
-          <LoomLogo />
+          <Image
+            src="/images/FGWilsonlogo.webp"
+            alt="FG Wilson logo"
+            width={100}
+            height={525}
+          />
+          <Image
+            src="/images/kohler-generators-logo.webp"
+            alt="Kohler Generators logo"
+            width={200}
+            height={525}
+          />
+          <Image
+            src="/images/perkins.webp"
+            alt="Kohler Generators logo"
+            width={200}
+            height={525}
+            className="bg-blue-600 p-2 "
+          />
+          <Image
+            src="/images/volvoLogo.webp"
+            alt="Kohler Generators logo"
+            width={100}
+            height={225}
+          />
+          <KohlerGeneratorsLogo />
+          {/* <GrammalyLogo /> */}
+          {/* <GoodLeapLogo /> */}
+          {/* <GoggleLogo />
+          <LoomLogo /> */}
         </div>
       </div>
     </div>

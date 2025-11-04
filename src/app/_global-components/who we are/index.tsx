@@ -33,9 +33,9 @@ const WhoWeAre = () => {
               Our Mission
             </h3>
             <p className="font-light text-white">
-              Our mission is to provide reliable power solutions across Southwest Nigeria
-              by offering top-quality generator sales and rentals, ensuring uninterrupted
-              power for homes, businesses, and large-scale operations.
+              To deliver cutting-edge power solutions with engineering
+              precision, superior products, and innovative maintenance programs
+              that guarantee performance, efficiency, and customer reliability.
             </p>
           </div>
           <div className="bg-[#1D3D3A] rounded-2xl p-8 sm:p-12 lg:p-16 flex flex-col justify-between gap-3 w-full lg:w-1/2">
@@ -44,9 +44,9 @@ const WhoWeAre = () => {
             </div>
             <h3 className="text-2xl font-medium text-white mb-7">Our Vision</h3>
             <p className="font-light text-white">
-              To be the leading generator service provider in Southwest Nigeria,
-              empowering businesses and communities with reliable power solutions
-              that drive economic growth and improve quality of life.
+              To lead in sustainable and innovative power technologies in
+              Nigeria by providing efficient, reliable, and future-focused
+              energy solutions for businesses and communities.
             </p>
           </div>
         </div>

@@ -19,3 +19,4 @@ export { default as DiscordIcon } from "./discord";
 export { default as FacebookIcon } from "./facebook";
 export { default as ExclamationIcon } from "./exclamation";
 export { default as Decor } from "./Decor";
+export { default as KohlerGeneratorsLogo } from "./kohler-generators-logo";
