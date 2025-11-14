@@ -1,3 +1,4 @@
+'use client";'
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Sans } from "next/font/google";
 import "./globals.css";
@@ -14,8 +15,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "WOLA Global - Reliable Power Solutions",
-  description: "WOLA Global offers top-quality generator sales and rentals across Southwest Nigeria. Trusted SDMO generators for homes, businesses, and industrial operations.",
+  title: "Bolton Engineering - Reliable Power Solutions",
+  description: "Bolton Engineering offers top-quality generator sales and rentals across Southwest Nigeria. Trusted SDMO generators for homes, businesses, and industrial operations.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

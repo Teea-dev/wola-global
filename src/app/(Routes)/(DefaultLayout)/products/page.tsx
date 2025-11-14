@@ -25,7 +25,7 @@ const products = [
     powerValue: 5,
     type: "Diesel",
     price: "₦850,000",
-    image: "/images/heroImg.webp",
+    image: "/images/products-demo.jpg",
     description: "Reliable 5kVA diesel generator perfect for small offices and homes.",
     features: ["Silent operation", "Fuel efficient", "Easy maintenance"],
     availability: "In Stock"
@@ -38,7 +38,7 @@ const products = [
     powerValue: 10,
     type: "Diesel",
     price: "₦1,200,000",
-    image: "/images/heroImg.webp",
+    image: "/images/products-demo.jpg",
     description: "Powerful 10kVA diesel generator for medium businesses.",
     features: ["High efficiency", "Low noise", "Automatic start"],
     availability: "In Stock"
@@ -51,7 +51,7 @@ const products = [
     powerValue: 20,
     type: "Diesel",
     price: "₦2,100,000",
-    image: "/images/heroImg.webp",
+    image: "/images/products-demo.jpg",
     description: "Industrial-grade 20kVA generator for large operations.",
     features: ["Industrial grade", "Remote monitoring", "Extended runtime"],
     availability: "In Stock"
@@ -64,7 +64,7 @@ const products = [
     powerValue: 3,
     type: "Petrol",
     price: "₦450,000",
-    image: "/images/heroImg.webp",
+    image: "/images/products-demo.jpg",
     description: "Compact and portable 3kVA petrol generator.",
     features: ["Portable", "Quiet operation", "Easy start"],
     availability: "In Stock"
@@ -77,7 +77,7 @@ const products = [
     powerValue: 7,
     type: "Petrol",
     price: "₦750,000",
-    image: "/images/heroImg.webp",
+    image: "/images/products-demo.jpg",
     description: "Versatile 7kVA petrol generator for various applications.",
     features: ["Versatile", "Economical", "Reliable"],
     availability: "In Stock"
@@ -90,7 +90,7 @@ const products = [
     powerValue: 50,
     type: "Diesel",
     price: "₦8,500,000",
-    image: "/images/heroImg.webp",
+    image: "/images/products-demo.jpg",
     description: "Heavy-duty 50kVA diesel generator for industrial use.",
     features: ["Heavy duty", "High performance", "Long lifespan"],
     availability: "In Stock"
@@ -103,7 +103,7 @@ const products = [
     powerValue: 100,
     type: "Diesel",
     price: "₦15,000,000",
-    image: "/images/heroImg.webp",
+    image: "/images/products-demo.jpg",
     description: "Massive 100kVA diesel generator for large industrial facilities.",
     features: ["Massive power", "Industrial grade", "Advanced controls"],
     availability: "In Stock"
@@ -116,7 +116,7 @@ const products = [
     powerValue: 2.5,
     type: "Petrol",
     price: "₦380,000",
-    image: "/images/heroImg.webp",
+    image: "/images/products-demo.jpg",
     description: "Lightweight and efficient 2.5kVA petrol generator.",
     features: ["Lightweight", "Efficient", "User-friendly"],
     availability: "In Stock"

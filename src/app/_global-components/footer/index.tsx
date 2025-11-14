@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,6 +17,13 @@ const Footer = () => {
     { icon: <FacebookIcon />, key: "facebook" },
     { icon: <InstagramIcon />, key: "instagram" },
   ];
+  const handleLinkClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    // setMobileMenuOpen(false); // Close mobile menu after clicking a link
+  };
 
   return (
     <section className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-16 mt-10 sm:mt-16 md:mt-20 bg-white">
@@ -50,17 +59,28 @@ const Footer = () => {
               </h3>
               <div className="flex flex-col gap-3 sm:gap-4">
                 {[
-                  "Our Service",
-                  "Benefits Offered",
-                  "Mission & Vision",
-                  "FAQ",
+                  { label: "Service", id: "service" },
+                  { label: "Products", href: "/products" },
+                  { label: "About Us", id: "about-us" },
+                  { label: "Benefits", id: "benefits" },
+                  { label: "FAQ?", id: "faq" },
                 ].map((item) => (
                   <Link
-                    key={item}
-                    href={`/${item.toLowerCase().replace(/ /g, "-")}`}
+                    key={item.id || item.href}
+                    href={item.href || `#${item.id}`}
                     className="text-[#6B7280] hover:text-gray-900 transition-colors text-sm sm:text-base"
+                    onClick={
+                      item.href
+                        ? undefined
+                        : (e) => {
+                            e.preventDefault();
+                            if (item.id) {
+                              handleLinkClick(item.id);
+                            }
+                          }
+                    }
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 ))}
               </div>
@@ -74,7 +94,8 @@ const Footer = () => {
                   (item) => (
                     <Link
                       key={item}
-                      href={`/${item.toLowerCase().replace(/ /g, "-")}`}
+                      href={"/"}
+                      // href={`/${item.toLowerCase().replace(/ /g, "-")}`}
                       className="text-[#6B7280] hover:text-gray-900 transition-colors text-sm sm:text-base"
                     >
                       {item}
@@ -106,20 +127,14 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto mt-6 sm:mt-8 px-4 sm:px-0">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
           <h3 className="text-[#6B7280] text-sm sm:text-base font-normal text-center sm:text-left">
-            © {new Date().getFullYear()} Wola Global Inc. All rights reserved.
+            © {new Date().getFullYear()} Bolton Engineering Inc. All rights reserved.
           </h3>
           <div className="flex items-center flex-row-reverse gap-1 sm:gap-10 text-[#6B7280] text-sm sm:text-base font-normal">
-            <Link
-              href="/"
-              className="hover:text-gray-900 transition-colors"
-            >
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               Privacy Policy
             </Link>
             <p className="text-[16px]">.</p>
-            <Link
-              href="/"
-              className="hover:text-gray-900 transition-colors"
-            >
+            <Link href="/" className="hover:text-gray-900 transition-colors">
               Terms & Conditions
             </Link>
           </div>

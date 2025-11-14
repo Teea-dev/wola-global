@@ -1,15 +1,17 @@
 import React from "react";
 import { IconTypes } from "./types";
 
-const KohlerGeneratorsLogo = ({ width = 202, height = 20 }: IconTypes) => {
+const KohlerGeneratorsLogo = ({ width = 200, height = 50 }: IconTypes) => {
   return (
     <svg
       role="img"
       aria-label="MTU Logo"
-    //   class="mtu-e-logo"
+      //   class="mtu-e-logo"
       viewBox="0 0 155 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
     >
       <path
         d="M95.7997 14.7768H92.6335L91.9493 16.6176H90.9982L93.8224 9.125H94.615L97.4391 16.6176H96.488L95.7997 14.7768ZM95.5118 13.9858L94.2166 10.4858L92.9213 13.9858H95.5118Z"

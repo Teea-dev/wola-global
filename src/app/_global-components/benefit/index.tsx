@@ -19,9 +19,10 @@ const Benefit = () => {
             </TextAnimate>
           </h2>
           <p className="text-[#6B7280]">
-            We provide comprehensive power solutions that keep your business running
-            smoothly. From generator sales and rentals to maintenance and support,
-            we ensure uninterrupted power for homes, businesses, and industrial operations.
+            We provide comprehensive power solutions that keep your business
+            running smoothly. From generator sales and rentals to maintenance
+            and support, we ensure uninterrupted power for homes, businesses,
+            and industrial operations.
           </p>
           <div className="space-y-4 sm:space-y-5 pt-2">
             <Button className="bg-[#1F253F] text-white px-6 sm:px-8 py-5 sm:py-6 rounded-md text-sm sm:text-base w-fit transition-colors duration-200">
@@ -50,10 +51,10 @@ const Benefit = () => {
         <div className="w-full lg:w-1/2">
           <div className="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square">
             <Image
-              src="/images/potential.png"
+              src="/images/reliable.jpg"
               alt="hero image"
               fill
-              className="object-contain"
+              className="object-contain rounded-4xl"
               priority
             />
           </div>
@@ -68,9 +69,10 @@ const Benefit = () => {
             </TextAnimate>
           </h2>
           <p className="text-[#6B7280]">
-            Our certified technicians provide expert installation, maintenance, and
-            support services. With years of experience in generator technology,
-            we ensure your equipment operates at peak performance and longevity.
+            Our certified technicians provide expert installation, maintenance,
+            and support services. With years of experience in generator
+            technology, we ensure your equipment operates at peak performance
+            and longevity.
           </p>
           <div className="flex flex-row gap-6 space-y-4 sm:space-y-5 pt-2">
             <Button className="bg-[#1F253F] text-white px-6 sm:px-8 py-5 sm:py-6 rounded-md text-sm sm:text-base w-fit transition-colors duration-200">
@@ -99,10 +101,10 @@ const Benefit = () => {
         <div className="w-full lg:w-1/2">
           <div className="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square">
             <Image
-              src="/images/partner.png"
+              src="/images/maintenance.jpg"
               alt="hero image"
               fill
-              className="object-contain"
+              className="object-contain rounded-4xl"
               priority
             />
           </div>

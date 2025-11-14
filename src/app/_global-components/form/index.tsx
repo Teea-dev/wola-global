@@ -109,9 +109,15 @@ const PartnerForm = () => {
                   <SelectItem value="generator-sales">
                     Generator Sales
                   </SelectItem>
-                  <SelectItem value="generator-rental">Generator Rental</SelectItem>
-                  <SelectItem value="maintenance">Maintenance Service</SelectItem>
-                  <SelectItem value="power-estimation">Power Load Estimation</SelectItem>
+                  <SelectItem value="generator-rental">
+                    Generator Rental
+                  </SelectItem>
+                  <SelectItem value="maintenance">
+                    Maintenance Service
+                  </SelectItem>
+                  <SelectItem value="power-estimation">
+                    Power Load Estimation
+                  </SelectItem>
                   <SelectItem value="other">Other</SelectItem>
                 </SelectContent>
               </Select>

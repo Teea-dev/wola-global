@@ -35,7 +35,7 @@ const Testimonial = () => {
       icon: <InvestmentIcon />,
       title: "CLIENT TESTIMONIAL",
       description:
-        "WOLA Global's generator rental service has been exceptional. Their SDMO generators provide reliable power for our construction projects, and their support team is always responsive.",
+        "Bolton Engineering's generator rental service has been exceptional. Their SDMO generators provide reliable power for our construction projects, and their support team is always responsive.",
       footerImage: "/images/client1.webp",
       footerName: "Henry Orton",
       footerPosition: "Project Manager, Danganox Construction",
@@ -46,7 +46,7 @@ const Testimonial = () => {
       icon: <MentorshipIcon />,
       title: "CLIENT TESTIMONIAL",
       description:
-        "WOLA Global helped us choose the perfect generator for our office. Their power load estimation service was spot-on, and we've had zero downtime since installation.",
+        "Bolton Engineering helped us choose the perfect generator for our office. Their power load estimation service was spot-on, and we've had zero downtime since installation.",
       footerImage: "/images/client2.webp",
       footerName: "Michael Johnson",
       footerPosition: "Operations Manager, Jobber Solutions",
@@ -57,7 +57,7 @@ const Testimonial = () => {
       icon: <PartnershipIcon />,
       title: "CLIENT TESTIMONIAL",
       description:
-        "WOLA Global's maintenance service keeps our generators running like new. Their technical expertise and prompt response times have saved us thousands in downtime costs.",
+        "Bolton Engineering's maintenance service keeps our generators running like new. Their technical expertise and prompt response times have saved us thousands in downtime costs.",
       footerImage: "/images/client3.webp",
       footerName: "Sarah Williams",
       footerPosition: "Facilities Manager, FutureSolutions",

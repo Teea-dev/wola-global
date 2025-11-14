@@ -9,21 +9,27 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
-  phoneNumber = "+2348123456789", // Replace with your actual WhatsApp number
-  message = "Hello! I'm interested in your generator services. Can you help me?"
+  phoneNumber = "+2349115899034", 
+  message = "Hello! I'm interested in your generator services. Can you help me?",
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace(
+      /[^0-9]/g,
+      ""
+    )}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   const handleQuickMessage = (quickMessage: string) => {
     const encodedMessage = encodeURIComponent(quickMessage);
-    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace(
+      /[^0-9]/g,
+      ""
+    )}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
     setIsExpanded(false);
   };
 
@@ -32,7 +38,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
     "What generators do you have available?",
     "I need generator maintenance service",
     "Can you help me choose the right generator size?",
-    "I'm interested in generator rental"
+    "I'm interested in generator rental",
   ];
 
   return (
@@ -49,7 +55,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
               <X size={16} />
             </button>
           </div>
-          
+
           <div className="space-y-2">
             {quickMessages.map((msg, index) => (
               <button
@@ -61,7 +67,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
               </button>
             ))}
           </div>
-          
+
           <div className="mt-4 pt-3 border-t">
             <button
               onClick={handleWhatsAppClick}
@@ -86,4 +92,3 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
 };
 
 export default WhatsAppButton;
-
