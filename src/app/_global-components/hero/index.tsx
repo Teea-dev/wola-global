@@ -21,7 +21,7 @@ const Hero = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10 lg:top-0 top-[-177px]"
       >
         {/* Make sure to place your video in the `public/videos` folder */}
         <source src="/videos/herovid.mp4" type="video/mp4" />
@@ -51,7 +51,7 @@ const Hero = () => {
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-2 justify-center">
-              <Button className="bg-[#1F253F] text-white px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors duration-200">
+              <Button className="bg-[#1F253F] cursor-pointer text-white px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors duration-200">
                 Generator Sales
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ const Hero = () => {
                   <path d="M7 17 17 7" />
                 </svg>
               </Button>
-              <Button className="bg-[#EAE68B] text-[#1F253F] px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors duration-200">
+              <Button className="bg-[#EAE68B] text-[#1F253F] px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors cursor-pointer duration-200">
                 Generator Rentals
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

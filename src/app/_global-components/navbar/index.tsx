@@ -27,10 +27,10 @@ const Nav = () => {
           <div className="px-3 py-1 rounded">
             <Link href="/">
               <Image
-                src="/images/logo.webp"
+                src="/images/bolton-logo.png"
                 alt="Ventsphere logo"
                 width={100}
-                height={30}
+                height={100}
                 className="object-contain"
               />
             </Link>

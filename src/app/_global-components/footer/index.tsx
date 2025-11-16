@@ -32,7 +32,7 @@ const Footer = () => {
           <div className="w-fit lg:w-[40%] flex flex-col gap-6 md:gap-10">
             <Link href="/">
               <Image
-                src="/images/logo.webp"
+                src="/images/bolton-logo.png"
                 alt="Ventsphere logo"
                 width={100}
                 height={30}

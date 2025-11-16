@@ -26,7 +26,7 @@ const Testimonial = () => {
       title: "WORD FROM FOUNDER",
       description:
         "We're committed to providing reliable power solutions that keep businesses running smoothly across Southwest Nigeria.",
-      footer: "— Augustine Ifenna",
+      footer: "— Wola Global, Founder & CEO",
       background: "/images/backgroundImg.webp",
       backgroundColor: null,
     },
