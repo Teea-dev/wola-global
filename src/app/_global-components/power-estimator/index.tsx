@@ -70,7 +70,7 @@ const PowerEstimator = () => {
   return (
     <div
       id="power-estimator"
-      className="w-full px-4 sm:px-6 lg:px-8 xl:px-32 py-8 sm:py-12 lg:py-40 bg-[#fff]"
+      className="w-full px-4 sm:px-6 lg:px-8 xl:px-32 py-8 sm:py-12 lg:py-40 bg-[#F7F6F2]"
     >
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="flex items-center w-fit rounded-lg px-2.5 sm:px-3 py-1.5 sm:py-2 gap-1.5 sm:gap-2">

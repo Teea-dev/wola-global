@@ -10,6 +10,7 @@ import PowerEstimator from "./_global-components/power-estimator";
 import { AccordionDemo } from "./_global-components/faq";
 import WaitlistBanner from "./_global-components/waitlist";
 import Footer from "./_global-components/footer";
+import { Projects } from "./_global-components/projects";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Benefit />
       {/* <Products /> */}
       <PowerEstimator />
+      <Projects />
       <Testimonial />
       <AccordionDemo />
       <WaitlistBanner />

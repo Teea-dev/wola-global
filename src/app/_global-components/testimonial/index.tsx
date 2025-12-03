@@ -35,7 +35,7 @@ const Testimonial = () => {
       icon: <InvestmentIcon />,
       title: "CLIENT TESTIMONIAL",
       description:
-        "Bolton Engineering's generator rental service has been exceptional. Their SDMO generators provide reliable power for our construction projects, and their support team is always responsive.",
+        "Bolton Engineering's generator repair service has been exceptional. Their SDMO generators provide reliable power for our construction projects, and their support team is always responsive.",
       footerImage: "/images/client1.webp",
       footerName: "Henry Orton",
       footerPosition: "Project Manager, Danganox Construction",

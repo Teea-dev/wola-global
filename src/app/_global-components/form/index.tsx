@@ -37,6 +37,8 @@ const formSchema = z.object({
   }),
 });
 
+const whatsappNumber = "+2349115899034"; // adjust number if needed
+
 const PartnerForm = () => {
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -49,7 +51,26 @@ const PartnerForm = () => {
   });
 
   const onSubmit = (data: any) => {
-    console.log(data);
+    // Build a readable message from form data
+    const plain = [
+      "New quote request:",
+      `Name: ${data.username}`,
+      `Email: ${data.email}`,
+      `Service: ${data.applicationType || "Not specified"}`,
+      `Message: ${data.message}`,
+    ].join("\n");
+
+    const phoneDigits = whatsappNumber.replace(/[^0-9]/g, "");
+    const waUrl = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(
+      plain
+    )}`;
+
+    // Open WhatsApp (web or app depending on client)
+    window.open(waUrl, "_blank");
+
+    // Optionally reset or keep form values
+    // form.reset();
+    console.log("Opened WhatsApp with message:", plain);
   };
 
   return (
@@ -109,8 +130,8 @@ const PartnerForm = () => {
                   <SelectItem value="generator-sales">
                     Generator Sales
                   </SelectItem>
-                  <SelectItem value="generator-rental">
-                    Generator Rental
+                  <SelectItem value="generator-repair">
+                    Generator repair
                   </SelectItem>
                   <SelectItem value="maintenance">
                     Maintenance Service

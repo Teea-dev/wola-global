@@ -16,7 +16,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: "Bolton Engineering - Reliable Power Solutions",
-  description: "Bolton Engineering offers top-quality generator sales and rentals across Southwest Nigeria. Trusted SDMO generators for homes, businesses, and industrial operations.",
+  description: "Bolton Engineering offers top-quality generator sales and repairs across Southwest Nigeria. Trusted SDMO generators for homes, businesses, and industrial operations.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

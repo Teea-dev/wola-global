@@ -9,8 +9,13 @@ import {
   InstagramIcon,
   LinkedinIcon,
 } from "../../../../public/icons";
+import { Mail, Phone } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const socialMediaLinks = [
     { icon: <LinkedinIcon />, key: "linkedin" },
     // { icon: <DiscordIcon />, key: "discord" },
@@ -21,8 +26,10 @@ const Footer = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      return;
     }
-    // setMobileMenuOpen(false); // Close mobile menu after clicking a link
+    // if element not found on current page, navigate to home with hash
+    router.push(`/#${id}`);
   };
 
   return (
@@ -33,23 +40,25 @@ const Footer = () => {
             <Link href="/">
               <Image
                 src="/images/bolton-logo.png"
-                alt="Ventsphere logo"
+                alt="Bolton engineering logo"
                 width={100}
                 height={30}
                 className="object-contain"
               />
             </Link>
             <p className="text-[#6B7280] text-sm sm:text-base font-normal">
-              Empowering visionary startups to reach new heights through funding
-              and support.
+              To send out experienced and happy engineers that will provide a
+              standard, high quality and satisfactory electromechanical
+              engineering services to all our clients for good reports and
+              returns on investment.
             </p>
-            <div className="flex items-center justify-between max-w-[145px]">
+            {/* <div className="flex items-center justify-between max-w-[145px]">
               {socialMediaLinks.map((item) => (
                 <Link key={item.key} href={"/#"}>
                   {item.icon}
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div className="w-full lg:w-[60%] grid grid-cols-2 md:grid-cols-3 gap-8 sm:gap-6">
@@ -67,7 +76,7 @@ const Footer = () => {
                 ].map((item) => (
                   <Link
                     key={item.id || item.href}
-                    href={item.href || `#${item.id}`}
+                    href={item.href || `/#${item.id}`}
                     className="text-[#6B7280] hover:text-gray-900 transition-colors text-sm sm:text-base"
                     onClick={
                       item.href
@@ -87,21 +96,21 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-4 sm:gap-6">
               <h3 className="text-[#1F253F] font-medium text-base sm:text-lg">
-                Partnership
+                Address
               </h3>
               <div className="flex flex-col gap-3 sm:gap-4">
-                {["Seed Funding", "Investor Partner", "Partnership"].map(
-                  (item) => (
-                    <Link
-                      key={item}
-                      href={"/"}
-                      // href={`/${item.toLowerCase().replace(/ /g, "-")}`}
-                      className="text-[#6B7280] hover:text-gray-900 transition-colors text-sm sm:text-base"
-                    >
-                      {item}
-                    </Link>
-                  )
-                )}
+                {[
+                  "13, Fagbile Street, Surulere , Lagos",
+                  "14, Anambra Street, Sun Citi Estate,Abuja",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    // href={`/${item.toLowerCase().replace(/ /g, "-")}`}
+                    className="text-[#6B7280] hover:text-gray-900 transition-colors text-sm sm:text-base"
+                  >
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -111,10 +120,22 @@ const Footer = () => {
               </h3>
               <div className="flex flex-col gap-3 sm:gap-4">
                 <p className="text-[#6B7280] text-sm sm:text-base font-normal flex items-center gap-2">
-                  contact@wolaglobal.com
+                  <a
+                    href="mailto:boltonengineeringltd@gmail.com"
+                    className="flex items-center gap-2 text-muted-foreground text-sm hover:text-blue-950 transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    boltonengineeringltd@gmail.com
+                  </a>{" "}
                 </p>
                 <p className="text-[#6B7280] text-sm sm:text-base font-normal flex items-center gap-2">
-                  +1 (123) 456-7890
+                  <a
+                    href="tel:+2349115899034"
+                    className="flex items-center gap-2 text-muted-foreground text-sm hover:text-blue-950 transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    +2349115899034
+                  </a>
                 </p>
               </div>
             </div>
@@ -127,7 +148,8 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto mt-6 sm:mt-8 px-4 sm:px-0">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
           <h3 className="text-[#6B7280] text-sm sm:text-base font-normal text-center sm:text-left">
-            © {new Date().getFullYear()} Bolton Engineering Inc. All rights reserved.
+            © {new Date().getFullYear()} Bolton Engineering Inc. All rights
+            reserved.
           </h3>
           <div className="flex items-center flex-row-reverse gap-1 sm:gap-10 text-[#6B7280] text-sm sm:text-base font-normal">
             <Link href="/" className="hover:text-gray-900 transition-colors">

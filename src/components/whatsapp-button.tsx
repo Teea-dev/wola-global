@@ -38,7 +38,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
     "What generators do you have available?",
     "I need generator maintenance service",
     "Can you help me choose the right generator size?",
-    "I'm interested in generator rental",
+    "I'm interested in generator repair",
   ];
 
   return (

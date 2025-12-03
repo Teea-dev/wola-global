@@ -20,7 +20,7 @@ const Benefit = () => {
           </h2>
           <p className="text-[#6B7280]">
             We provide comprehensive power solutions that keep your business
-            running smoothly. From generator sales and rentals to maintenance
+            running smoothly. From generator sales and repairs to maintenance
             and support, we ensure uninterrupted power for homes, businesses,
             and industrial operations.
           </p>

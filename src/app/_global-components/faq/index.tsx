@@ -31,12 +31,12 @@ export function AccordionDemo() {
             <div className="flex flex-col gap-6 sm:gap-10">
               <p className="text-[#6B7280]">
                 Find answers to the most common questions about our generator
-                sales, rentals, and maintenance services.
+                sales, repairs, and maintenance services.
               </p>
               <div className="text-[#6B7280]">
                 For more inquiries, reach us at{" "}
                 <p className="text-[#1F253F] font-medium">
-                  contact@wolaglobal.com
+                  boltonengineeringltd@gmail.com
                 </p>
               </div>
             </div>
@@ -68,10 +68,10 @@ export function AccordionDemo() {
           </AccordionItem>
           <AccordionItem value="item-4">
             <AccordionTrigger>
-              What are your rental terms and pricing?
+              What are your repair terms and pricing?
             </AccordionTrigger>
             <AccordionContent>
-              We offer flexible rental terms for both short-term and long-term needs. Pricing varies based on generator size, rental duration, and location. Contact us for a customized quote that fits your specific requirements and budget.
+              We offer flexible repair terms for both short-term and long-term needs. Pricing varies based on generator size, repair duration, and location. Contact us for a customized quote that fits your specific requirements and budget.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">

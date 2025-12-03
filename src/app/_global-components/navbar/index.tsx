@@ -4,20 +4,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { X, Menu } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const handleLinkClick = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  // Navigate to an anchor: if on home page scroll, otherwise route to "/#id"
+  const handleNavTo = (id?: string, href?: string) => {
+    setMobileMenuOpen(false);
+    if (href) {
+      router.push(href);
+      return;
     }
-    setMobileMenuOpen(false); // Close mobile menu after clicking a link
+    if (!id) return;
+    if (pathname === "/") {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+    }
+    // navigate to home with hash; browser/Next should handle scrolling to hash
+    router.push(`/#${id}`);
   };
 
   return (
@@ -55,16 +69,18 @@ const Nav = () => {
             ].map((item) => (
               <Link
                 key={item.id || item.href}
-                href={item.href || `#${item.id}`}
+                href={item.href || `/#${item.id}`}
                 className="text-[#1F253F] text-[14px] font-medium hover:text-gray-900 transition-colors"
                 onClick={
                   item.href
-                    ? undefined
+                    ? (e) => {
+                        // allow normal navigation for external hrefs but close mobile if open
+                        e.preventDefault();
+                        handleNavTo(undefined, item.href);
+                      }
                     : (e) => {
                         e.preventDefault();
-                        if (item.id) {
-                          handleLinkClick(item.id);
-                        }
+                        handleNavTo(item.id);
                       }
                 }
               >
@@ -133,16 +149,17 @@ const Nav = () => {
               ].map((item) => (
                 <Link
                   key={item.id || item.href}
-                  href={item.href || `#${item.id}`}
+                  href={item.href || `/#${item.id}`}
                   className="text-gray-600 hover:text-gray-900 transition-colors px-4 py-2 hover:bg-gray-50"
                   onClick={
                     item.href
-                      ? undefined
+                      ? (e) => {
+                          e.preventDefault();
+                          handleNavTo(undefined, item.href);
+                        }
                       : (e) => {
                           e.preventDefault();
-                          if (item.id) {
-                            handleLinkClick(item.id);
-                          }
+                          handleNavTo(item.id);
                         }
                   }
                 >

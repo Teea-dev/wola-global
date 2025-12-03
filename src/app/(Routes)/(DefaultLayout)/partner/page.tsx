@@ -30,7 +30,7 @@ export default function PartnerPage() {
               <div className="text-[#6B7280]">
                 For immediate assistance, reach us at{" "}
                 <p className="text-[#1F253F] font-medium">
-                  contact@wolaglobal.com
+                   boltonengineeringltd@gmail.com
                 </p>
               </div>
             </div>

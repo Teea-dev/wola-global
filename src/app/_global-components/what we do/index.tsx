@@ -7,9 +7,54 @@ import {
   PartnershipIcon,
   SeedFundingIcon,
 } from "../../../../public/icons";
+import {
+  Zap,
+  Factory,
+  Wrench,
+  Calculator,
+  Stethoscope,
+  Droplets,
+  Home,
+  Tractor,
+  Wind,
+  Sun,
+} from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+const additionalServices = [
+  {
+    icon: Stethoscope,
+    title: "Hospital Equipment",
+    description:
+      "Electromechanical hospital equipment – sales, installation, and maintenance.",
+  },
+  {
+    icon: Droplets,
+    title: "Water Treatment Plants",
+    description: "Complete water treatment plant service and installation.",
+  },
+  {
+    icon: Home,
+    title: "Rural Electrification",
+    description: "Rural and housing electrification projects across Nigeria.",
+  },
+  {
+    icon: Tractor,
+    title: "Agricultural Equipment",
+    description: "Agricultural and earth moving equipment sale and services.",
+  },
+  {
+    icon: Wind,
+    title: "Air Conditioning",
+    description: "Air conditioner supply and maintenance from 1HP to 15HP.",
+  },
+  {
+    icon: Sun,
+    title: "Solar Power & UPS",
+    description: "Solar power stations, transformers, and UPS systems.",
+  },
+];
 const WhatWeDo = () => {
   return (
     <div
@@ -59,12 +104,12 @@ const WhatWeDo = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-medium text-[#1D3D3A] mb-7">
-                  Generator Rentals
+                  Generator repairs
                 </h3>
                 <p className="font-light text-[#6B7280]">
-                  We provide flexible rental options for short-term and long-term
-                  power needs, perfect for events, construction projects, and
-                  temporary power requirements.
+                  We provide flexible repair options for short-term and
+                  long-term power needs, perfect for events, construction
+                  projects, and temporary power requirements.
                 </p>
               </div>
             </div>
@@ -79,9 +124,9 @@ const WhatWeDo = () => {
                   Maintenance & Support
                 </h3>
                 <p className="font-light text-[#6B7280]">
-                  We provide comprehensive maintenance services and technical support
-                  to ensure your generators operate at peak performance throughout
-                  their lifespan.
+                  We provide comprehensive maintenance services and technical
+                  support to ensure your generators operate at peak performance
+                  throughout their lifespan.
                 </p>
               </div>
             </div>
@@ -127,6 +172,26 @@ const WhatWeDo = () => {
               </svg>
             </Link>
           </Button>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+          {additionalServices.map((service) => (
+            <div
+              key={service.title}
+              className="bg-card/50 rounded-lg p-4 border border-border flex items-start gap-4"
+            >
+              <div className="w-10 h-10  rounded-lg bg-[#1D3D3A] flex items-center justify-center shrink-0">
+                <service.icon className="w-5 h-5 text-accent " />
+              </div>
+              <div>
+                <h4 className="font-semibold text-card-foreground text-sm mb-1">
+                  {service.title}
+                </h4>
+                <p className="text-muted-foreground text-xs leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

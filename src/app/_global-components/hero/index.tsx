@@ -43,50 +43,54 @@ const Hero = () => {
 
             <h1 className="text-[#B1AD4E] text-center text-[14px] sm:text-lg font-[400]">
               <TextAnimate animation="fadeIn" by="line" as="p">
-                Bolton Engineering offers top-quality generator sales and rentals
-                across Southwest Nigeria. We ensure uninterrupted power for your
-                home and business with our trusted SDMO and premium generator
-                solutions.
+                Bolton Engineering offers top-quality generator sales,
+                repairs and facility management across Southwest Nigeria. We ensure uninterrupted power
+                for your home and business with our trusted SDMO and premium
+                generator solutions.
               </TextAnimate>
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-2 justify-center">
-              <Button className="bg-[#1F253F] cursor-pointer text-white px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors duration-200">
-                Generator Sales
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-arrow-up-right transform group-hover:translate-x-1 transition-transform duration-200"
-                >
-                  <path d="M7 7h10v10" />
-                  <path d="M7 17 17 7" />
-                </svg>
-              </Button>
-              <Button className="bg-[#EAE68B] text-[#1F253F] px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors cursor-pointer duration-200">
-                Generator Rentals
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="5.59"
-                  height="6.56"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-arrow-up-right"
-                >
-                  <path d="M7 7h10v10" />
-                  <path d="M7 17 17 7" />
-                </svg>
-              </Button>
+              <a href="/products">
+                <Button className="bg-[#1F253F] cursor-pointer text-white px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors duration-200">
+                  Generator Sales
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-up-right transform group-hover:translate-x-1 transition-transform duration-200"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                  </svg>
+                </Button>
+              </a>
+              <a href="/products">
+                <Button className="bg-[#EAE68B] text-[#1F253F] px-6 sm:px-8 py-5 sm:py-6 rounded-2xl text-sm sm:text-base w-full sm:w-fit transition-colors cursor-pointer duration-200">
+                  Generator repairs
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5.59"
+                    height="6.56"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-up-right"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                  </svg>
+                </Button>
+              </a>
             </div>
           </div>
 
